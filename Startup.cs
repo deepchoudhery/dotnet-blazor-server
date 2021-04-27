@@ -16,7 +16,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using dotnet_blazor_server.Data;
-using Microsoft.Graph;
 
 namespace dotnet_blazor_server
 {
@@ -38,7 +37,7 @@ namespace dotnet_blazor_server
             services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
                     .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
-                        .AddMicrosoftGraph(Configuration.GetSection("DownstreamApi"))
+                        .AddDownstreamWebApi("DownstreamApi", Configuration.GetSection("DownstreamApi"))
                         .AddInMemoryTokenCaches();
             services.AddControllersWithViews()
                 .AddMicrosoftIdentityUI();

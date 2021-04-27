@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>aspnet-dotnet_blazor_server-4A4A0EA4-D750-4EB2-9F5E-A651E3494762</UserSecretsId>
+    <UserSecretsId>aspnet-dotnet_blazor_server-52C5D17C-74D4-45DE-A527-EDC6A99D8032</UserSecretsId>
     <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
     <RootNamespace>dotnet_blazor_server</RootNamespace>
   </PropertyGroup>
@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.5" NoWarn="NU1605"/>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.5" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.Identity.Web" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="1.1.0" />
     <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.1.0" />
   </ItemGroup>
 
